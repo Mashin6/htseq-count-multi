@@ -48,7 +48,7 @@ Files from individual jobs can be then merged together
 # .sam files
 samtools view -H input.bam \
         | cat - output.*_temp.sam \
-        | $SAMTOOLS sort \
+        | samtools sort \
             -@ 20 \
             -n \
             -o output.bam
